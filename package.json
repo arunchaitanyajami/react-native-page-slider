@@ -1,0 +1,36 @@
+{
+  "name": "arunchaitanyajami/react-native-page-slider",
+  "version": "1.2.0",
+  "description": "Simple page slider",
+  "keywords": [
+    "react-native",
+    "slider",
+    "swiper",
+    "gallery"
+  ],
+  "homepage": "https://github.com/arunchaitanyajami/react-native-page-slider/",
+  "bugs": {
+    "url": "https://github.com/arunchaitanyajami/react-native-page-slider/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arunchaitanyajami/react-native-page-slider.git"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "react-native": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.71.5",
+    "typescript": "~5.0.3"
+  },
+  "peerDependencies": {
+    "react": ">= 16.3.0",
+    "react-native": ">= 0.54.0"
+  },
+  "scripts": {
+    "prettify": "prettier --write 'src/**/*.{ts,tsx}' && eslint 'src/**/*.{ts,tsx}'",
+    "build": "rimraf ./dist && tsc"
+  }
+}
