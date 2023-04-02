@@ -1,7 +1,7 @@
 {
   "name": "arunchaitanyajami/react-native-page-slider",
-  "version": "1.2.0",
-  "description": "Simple page slider",
+  "version": "1.0.0",
+  "description": "Simple page slider with full customisation",
   "keywords": [
     "react-native",
     "slider",
@@ -23,7 +23,19 @@
   "devDependencies": {
     "react": "^18.2.0",
     "react-native": "^0.71.5",
-    "typescript": "~5.0.3"
+    "typescript": "~5.0.3",
+    "@types/react-native": "^0.71.5",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1"
   },
   "peerDependencies": {
     "react": ">= 16.3.0",

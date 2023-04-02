@@ -18,6 +18,8 @@ type Props = typeof PageSlider.defaultProps & {
   style?: StyleProp<ViewStyle>;
   onCurrentPageChange: (currentPage: number) => void;
   onSelectedPageChange: (selectedPage: number) => void;
+  width?: number;
+  height?: number;
 };
 
 export class PageSlider extends Component<Props> {
@@ -93,12 +95,12 @@ export class PageSlider extends Component<Props> {
   private getPageWidth = (): number => {
     const { width } = Dimensions.get('screen');
     if (this.props.mode === 'page') {
-      return width;
+      return this.props.width ? this.props.width : width;
     }
 
     const { peek, pageMargin } = this.props;
 
-    return width - 2 * peek + 2 * pageMargin;
+    return this.props.width ? this.props.width : width - 2 * peek + 2 * pageMargin;
   };
 
   // Get currently visible page
@@ -120,14 +122,14 @@ export class PageSlider extends Component<Props> {
     const { width } = Dimensions.get('screen');
 
     const pageStyle = {
-      height: '100%',
+      height: this.props.height ? this.props.height : '100%',
     };
     let scrollViewProps: ScrollViewProps = {};
 
     // Setup pages and ScrollView according to selected mode
     if (mode === 'page') {
       Object.assign(pageStyle, {
-        width,
+        width : this.props.width ? this.props.width : width,
       });
     } else if (mode === 'card') {
       const { contentPaddingVertical, peek, pageMargin } = this.props;
@@ -152,7 +154,7 @@ export class PageSlider extends Component<Props> {
 
       Object.assign(pageStyle, {
         marginHorizontal: pageMargin,
-        width: width - 2 * peek,
+        width: this.props.width ? this.props.width : width - 2 * peek,
       });
     }
 
