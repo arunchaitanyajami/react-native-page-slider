@@ -129,7 +129,7 @@ export class PageSlider extends Component<Props> {
     // Setup pages and ScrollView according to selected mode
     if (mode === 'page') {
       Object.assign(pageStyle, {
-        width : this.props.width ? this.props.width : width,
+        width: this.props.width ? this.props.width : width,
       });
     } else if (mode === 'card') {
       const { contentPaddingVertical, peek, pageMargin } = this.props;
