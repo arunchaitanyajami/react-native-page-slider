@@ -1,5 +1,5 @@
 {
-  "name": "arunchaitanyajami/react-native-page-slider",
+  "name": "react-native-page-slider",
   "version": "1.0.0",
   "description": "Simple page slider with full customisation",
   "keywords": [
@@ -17,9 +17,7 @@
     "url": "https://github.com/arunchaitanyajami/react-native-page-slider.git"
   },
   "license": "MIT",
-  "main": "dist/index.js",
-  "react-native": "src/index.ts",
-  "types": "dist/index.d.ts",
+  "main": "src/index.js",
   "devDependencies": {
     "react": "^18.2.0",
     "react-native": "^0.71.5",
